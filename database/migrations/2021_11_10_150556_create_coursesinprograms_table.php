@@ -16,9 +16,16 @@ class CreateCoursesinprogramsTable extends Migration
         Schema::create('coursesinprograms', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer("coursesinprogramsid");
-            $table->integer("programid");
-            $table->integer("courseid");
+            $table->unsignedBigInteger("program_id")->nullable();
+            $table->unsignedBigInteger("course_id")->nullable();
+
+            $table->foreign("program_id")
+                ->references("id")->on("programs")
+                ->onDelete("set null");
+
+            $table->foreign("course_id")
+                ->references("id")->on("courses")
+                ->onDelete("set null");
         });
     }
 

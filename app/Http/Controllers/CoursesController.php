@@ -15,8 +15,6 @@ class CoursesController extends Controller
     public function index()
     {
         //
-        $courses = courses::all();
-        return $courses;
     }
 
     /**
@@ -38,8 +36,6 @@ class CoursesController extends Controller
     public function store(Request $request)
     {
         //
-        $courses = courses::create($request->all());
-        return $courses;
     }
 
     /**
@@ -74,9 +70,6 @@ class CoursesController extends Controller
     public function update(Request $request, courses $courses)
     {
         //
-        $response = $courses->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
@@ -88,7 +81,5 @@ class CoursesController extends Controller
     public function destroy(courses $courses)
     {
         //
-        $response = $courses->findOrFail($id);
-        return $response->destroy($id);
     }
 }

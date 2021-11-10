@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\typeclassroom;
+use App\Models\faculties;
 use Illuminate\Http\Request;
 
-class TypeclassroomController extends Controller
+class FacultiesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TypeclassroomController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\typeclassroom  $typeclassroom
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Http\Response
      */
-    public function show(typeclassroom $typeclassroom)
+    public function show(faculties $faculties)
     {
         //
     }
@@ -52,10 +52,10 @@ class TypeclassroomController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\typeclassroom  $typeclassroom
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Http\Response
      */
-    public function edit(typeclassroom $typeclassroom)
+    public function edit(faculties $faculties)
     {
         //
     }
@@ -64,10 +64,10 @@ class TypeclassroomController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\typeclassroom  $typeclassroom
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, typeclassroom $typeclassroom)
+    public function update(Request $request, faculties $faculties)
     {
         //
     }
@@ -75,10 +75,10 @@ class TypeclassroomController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\typeclassroom  $typeclassroom
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Http\Response
      */
-    public function destroy(typeclassroom $typeclassroom)
+    public function destroy(faculties $faculties)
     {
         //
     }

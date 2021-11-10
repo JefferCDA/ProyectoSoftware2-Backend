@@ -8,5 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class licenses extends Model
 {
     use HasFactory;
-    protected $fillable = ["licensesid","number","state","userid","roleid"];
 }

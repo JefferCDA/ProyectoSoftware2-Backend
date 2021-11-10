@@ -15,8 +15,6 @@ class ClassroomsController extends Controller
     public function index()
     {
         //
-        $classrooms = classrooms::all();
-        return $classrooms;
     }
 
     /**
@@ -38,8 +36,6 @@ class ClassroomsController extends Controller
     public function store(Request $request)
     {
         //
-        $classrooms = classrooms::create($request->all());
-        return $classrooms;
     }
 
     /**
@@ -74,9 +70,6 @@ class ClassroomsController extends Controller
     public function update(Request $request, classrooms $classrooms)
     {
         //
-        $response = $classrooms->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
@@ -88,7 +81,5 @@ class ClassroomsController extends Controller
     public function destroy(classrooms $classrooms)
     {
         //
-        $response = $classrooms->findOrFail($id);
-        return $response->destroy($id);
     }
 }

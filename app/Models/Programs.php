@@ -8,5 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class programs extends Model
 {
     use HasFactory;
-    protected $fillable = ["programid","name","description","facultyid"];
 }

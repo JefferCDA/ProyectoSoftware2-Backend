@@ -15,8 +15,6 @@ class EnrollmentsController extends Controller
     public function index()
     {
         //
-        $enrollments = enrollments::all();
-        return $enrollments;
     }
 
     /**
@@ -27,8 +25,6 @@ class EnrollmentsController extends Controller
     public function create()
     {
         //
-        $enrollments = enrollments::create($request->all());
-        return $enrollments;
     }
 
     /**
@@ -74,9 +70,6 @@ class EnrollmentsController extends Controller
     public function update(Request $request, enrollments $enrollments)
     {
         //
-        $response = $enrollments->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
@@ -88,7 +81,5 @@ class EnrollmentsController extends Controller
     public function destroy(enrollments $enrollments)
     {
         //
-        $response = $enrollments->findOrFail($id);
-        return $response->destroy($id);
     }
 }

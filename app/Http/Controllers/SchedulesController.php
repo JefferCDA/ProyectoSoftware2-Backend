@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\facultys;
+use App\Models\schedules;
 use Illuminate\Http\Request;
 
-class FacultysController extends Controller
+class SchedulesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,8 +25,6 @@ class FacultysController extends Controller
     public function create()
     {
         //
-        $facultys = facultys::all();
-        return $facultys;
     }
 
     /**
@@ -38,17 +36,15 @@ class FacultysController extends Controller
     public function store(Request $request)
     {
         //
-        $facultys = facultys::create($request->all());
-        return $facultys;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Http\Response
      */
-    public function show(facultys $facultys)
+    public function show(schedules $schedules)
     {
         //
     }
@@ -56,10 +52,10 @@ class FacultysController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Http\Response
      */
-    public function edit(facultys $facultys)
+    public function edit(schedules $schedules)
     {
         //
     }
@@ -68,27 +64,22 @@ class FacultysController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, facultys $facultys)
+    public function update(Request $request, schedules $schedules)
     {
         //
-        $response = $facultys->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Http\Response
      */
-    public function destroy(facultys $facultys)
+    public function destroy(schedules $schedules)
     {
         //
-        $response = $facultys->findOrFail($id);
-        return $response->destroy($id);
     }
 }

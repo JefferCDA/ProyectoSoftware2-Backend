@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\schedule;
+use App\Models\users;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class SchedulePolicy
+class UsersPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class SchedulePolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, schedule $schedule)
+    public function view(User $user, users $users)
     {
         //
     }
@@ -48,10 +48,10 @@ class SchedulePolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, schedule $schedule)
+    public function update(User $user, users $users)
     {
         //
     }
@@ -60,10 +60,10 @@ class SchedulePolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, schedule $schedule)
+    public function delete(User $user, users $users)
     {
         //
     }
@@ -72,10 +72,10 @@ class SchedulePolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, schedule $schedule)
+    public function restore(User $user, users $users)
     {
         //
     }
@@ -84,10 +84,10 @@ class SchedulePolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, schedule $schedule)
+    public function forceDelete(User $user, users $users)
     {
         //
     }

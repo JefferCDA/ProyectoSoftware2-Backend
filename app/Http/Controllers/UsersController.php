@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\schedule;
+use App\Models\users;
 use Illuminate\Http\Request;
 
-class ScheduleController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,6 @@ class ScheduleController extends Controller
     public function index()
     {
         //
-        $schedule = schedule::all();
-        return $schedule;
     }
 
     /**
@@ -38,17 +36,15 @@ class ScheduleController extends Controller
     public function store(Request $request)
     {
         //
-        $schedule = schedule::create($request->all());
-        return $schedule;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Http\Response
      */
-    public function show(schedule $schedule)
+    public function show(users $users)
     {
         //
     }
@@ -56,10 +52,10 @@ class ScheduleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Http\Response
      */
-    public function edit(schedule $schedule)
+    public function edit(users $users)
     {
         //
     }
@@ -68,27 +64,22 @@ class ScheduleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, schedule $schedule)
+    public function update(Request $request, users $users)
     {
         //
-        $response = $schedule->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\schedule  $schedule
+     * @param  \App\Models\users  $users
      * @return \Illuminate\Http\Response
      */
-    public function destroy(schedule $schedule)
+    public function destroy(users $users)
     {
         //
-        $response = $schedule->findOrFail($id);
-        return $response->destroy($id);
     }
 }

@@ -16,11 +16,19 @@ class CreateEnrollmentsTable extends Migration
         Schema::create('enrollments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer("enrollmentid");
             $table->integer("semester");
-            $table->integer("state");
-            $table->integer("userid");
-            $table->integer("programid");
+            $table->boolean("state");
+
+            $table->unsignedBigInteger("user_id")->nullable();
+            $table->unsignedBigInteger("program_id")->nullable();
+
+            $table->foreign("user_id")
+                ->references("id")->on("users")
+                ->onDelete("set null");
+
+            $table->foreign("program_id")
+                ->references("id")->on("programs")
+                ->onDelete("set null");
         });
     }
 

@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\facultys;
+use App\Models\schedules;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class FacultysPolicy
+class SchedulesPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class FacultysPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, facultys $facultys)
+    public function view(User $user, schedules $schedules)
     {
         //
     }
@@ -48,10 +48,10 @@ class FacultysPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, facultys $facultys)
+    public function update(User $user, schedules $schedules)
     {
         //
     }
@@ -60,10 +60,10 @@ class FacultysPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, facultys $facultys)
+    public function delete(User $user, schedules $schedules)
     {
         //
     }
@@ -72,10 +72,10 @@ class FacultysPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, facultys $facultys)
+    public function restore(User $user, schedules $schedules)
     {
         //
     }
@@ -84,10 +84,10 @@ class FacultysPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\facultys  $facultys
+     * @param  \App\Models\schedules  $schedules
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, facultys $facultys)
+    public function forceDelete(User $user, schedules $schedules)
     {
         //
     }

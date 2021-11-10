@@ -15,8 +15,6 @@ class RolesController extends Controller
     public function index()
     {
         //
-        $roles = roles::all();
-        return $roles;
     }
 
     /**
@@ -38,8 +36,6 @@ class RolesController extends Controller
     public function store(Request $request)
     {
         //
-        $roles = roles::create($request->all());
-        return $roles;
     }
 
     /**
@@ -74,9 +70,6 @@ class RolesController extends Controller
     public function update(Request $request, roles $roles)
     {
         //
-        $response = $roles->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
@@ -88,7 +81,5 @@ class RolesController extends Controller
     public function destroy(roles $roles)
     {
         //
-        $response = $roles->findOrFail($id);
-        return $response->destroy($id);
     }
 }

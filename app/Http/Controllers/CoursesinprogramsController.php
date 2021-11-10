@@ -15,8 +15,6 @@ class CoursesinprogramsController extends Controller
     public function index()
     {
         //
-        $coursesinprograms = coursesinprograms::all();
-        return $coursesinprograms;
     }
 
     /**
@@ -38,8 +36,6 @@ class CoursesinprogramsController extends Controller
     public function store(Request $request)
     {
         //
-        $coursesinprograms = coursesinprograms::create($request->all());
-        return $coursesinprograms;
     }
 
     /**
@@ -74,9 +70,6 @@ class CoursesinprogramsController extends Controller
     public function update(Request $request, coursesinprograms $coursesinprograms)
     {
         //
-        $response = $coursesinprograms->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
@@ -88,7 +81,5 @@ class CoursesinprogramsController extends Controller
     public function destroy(coursesinprograms $coursesinprograms)
     {
         //
-        $response = $coursesinprograms->findOrFail($id);
-        return $response->destroy($id);
     }
 }

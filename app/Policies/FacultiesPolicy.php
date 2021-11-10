@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Asignaturas;
 use App\Models\User;
+use App\Models\faculties;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class AsignaturasPolicy
+class FacultiesPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class AsignaturasPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Asignaturas  $asignaturas
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Asignaturas $asignaturas)
+    public function view(User $user, faculties $faculties)
     {
         //
     }
@@ -48,10 +48,10 @@ class AsignaturasPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Asignaturas  $asignaturas
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Asignaturas $asignaturas)
+    public function update(User $user, faculties $faculties)
     {
         //
     }
@@ -60,10 +60,10 @@ class AsignaturasPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Asignaturas  $asignaturas
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Asignaturas $asignaturas)
+    public function delete(User $user, faculties $faculties)
     {
         //
     }
@@ -72,10 +72,10 @@ class AsignaturasPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Asignaturas  $asignaturas
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Asignaturas $asignaturas)
+    public function restore(User $user, faculties $faculties)
     {
         //
     }
@@ -84,10 +84,10 @@ class AsignaturasPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Asignaturas  $asignaturas
+     * @param  \App\Models\faculties  $faculties
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Asignaturas $asignaturas)
+    public function forceDelete(User $user, faculties $faculties)
     {
         //
     }

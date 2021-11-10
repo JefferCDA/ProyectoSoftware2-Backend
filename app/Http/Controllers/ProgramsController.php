@@ -15,8 +15,6 @@ class ProgramsController extends Controller
     public function index()
     {
         //
-        $programs = programs::all();
-        return $programs;
     }
 
     /**
@@ -38,8 +36,6 @@ class ProgramsController extends Controller
     public function store(Request $request)
     {
         //
-        $programs = programs::create($request->all());
-        return $programs;
     }
 
     /**
@@ -74,9 +70,6 @@ class ProgramsController extends Controller
     public function update(Request $request, programs $programs)
     {
         //
-        $response = $programs->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
@@ -88,7 +81,5 @@ class ProgramsController extends Controller
     public function destroy(programs $programs)
     {
         //
-        $response = $programs->findOrFail($id);
-        return $response->destroy($id);
     }
 }

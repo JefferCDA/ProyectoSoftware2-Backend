@@ -25,8 +25,6 @@ class LicensesController extends Controller
     public function create()
     {
         //
-        $licenses = licenses::all();
-        return $licenses;
     }
 
     /**
@@ -38,8 +36,6 @@ class LicensesController extends Controller
     public function store(Request $request)
     {
         //
-        $licenses = licenses::create($request->all());
-        return $licenses;
     }
 
     /**
@@ -74,9 +70,6 @@ class LicensesController extends Controller
     public function update(Request $request, licenses $licenses)
     {
         //
-        $response = $licenses->findOrFail($request->id);
-        $response->update($request->all());
-        return $response;
     }
 
     /**
@@ -88,7 +81,5 @@ class LicensesController extends Controller
     public function destroy(licenses $licenses)
     {
         //
-        $response = $licenses->findOrFail($id);
-        return $response->destroy($id);
     }
 }
