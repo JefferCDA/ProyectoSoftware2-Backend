@@ -18,6 +18,7 @@ class CreateLicensesTable extends Migration
             $table->timestamps();
             $table->integer("number");
             $table->boolean("state");
+            $table->string("photo");
 
             $table->unsignedBigInteger("user_id")->nullable();
             $table->unsignedBigInteger("role_id")->nullable();
