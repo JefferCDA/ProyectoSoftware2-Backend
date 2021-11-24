@@ -2,15 +2,16 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\ClassroomsController;
-use App\Http\Controller\CoursesController;
-use App\Http\Controller\CoursesinprogramsController;
-use App\Http\Controller\EnrollmentsController;
-use App\Http\Controller\FacultysController;
-use App\Http\Controller\LicensesController;
-use App\Http\Controller\ProgramsController;
-use App\Http\Controller\RolesController;
-use App\Http\Controller\ScheduleController;
+use App\Http\Controllers\ClassroomsController;
+use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\CoursesinprogramsController;
+use App\Http\Controllers\EnrollmentsController;
+use App\Http\Controllers\FacultysController;
+use App\Http\Controllers\LicensesController;
+use App\Http\Controllers\ProgramsController;
+use App\Http\Controllers\RolesController;
+use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\VirtualLicensesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,3 +77,8 @@ Route::get("Typeclassroom",[TypeclassroomController::class,"index"]);
 Route::post("Typeclassroom",[TypeclassroomController::class,"store"]);
 Route::put("Typeclassroom",[TypeclassroomController::class,"update"]);
 Route::delete("Typeclassroom/{id}",[TypeclassroomController::class,"destroy"]);
+
+Route::get("Virtuallicense", [VirtualLicensesController::class, "index"]);
+Route::post("Virtuallicense", [VirtualLicensesController::class, "store"]);
+Route::put("Virtuallicense",[VirtualLicensesController::class,"update"]);
+Route::delete("Virtuallicense", [VirtualLicensesController::class, "destroy"]);
